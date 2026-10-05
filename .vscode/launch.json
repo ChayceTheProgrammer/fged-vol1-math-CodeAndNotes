@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug: fged_tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tests/fged_tests",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "MIMode": "gdb",
+            "externalConsole": false
+        },
+        {
+            "name": "Debug: Chapter 1 Playground",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch01_playground",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "MIMode": "gdb",
+            "externalConsole": false
+        },
+        {
+            "name": "Debug: Chapter 2 Playground",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch02_playground",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "MIMode": "gdb",
+            "externalConsole": false
+        },
+        {
+            "name": "Debug: Chapter 3 Playground",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch03_playground",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "MIMode": "gdb",
+            "externalConsole": false
+        },
+        {
+            "name": "Debug: Chapter 4 Playground",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch04_playground",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "MIMode": "gdb",
+            "externalConsole": false
+        }
+    ]
+}
