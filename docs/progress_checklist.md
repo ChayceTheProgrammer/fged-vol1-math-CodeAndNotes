@@ -4,8 +4,8 @@ Check items off as you implement the matching stub and its test goes
 green. Section numbers match the book's table of contents.
 
 ## Chapter 1 — Vectors and Matrices
-- [ ] 1.2.1 Magnitude and Scalar Multiplication — `Magnitude`, `Normalize`
-- [ ] 1.5.1 Dot Product — `Dot`
+- [x] 1.2.1 Magnitude and Scalar Multiplication — `Magnitude`, `Normalize`
+- [x] 1.5.1 Dot Product — `Dot`
 - [ ] 1.5.2 Cross Product — `Cross`
 - [ ] 1.5.3 Scalar Triple Product — `ScalarTripleProduct`
 - [ ] 1.6 Vector Projection — `Project`, `Reject`

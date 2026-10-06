@@ -5,15 +5,21 @@ namespace fged {
 
 // --- §1.2 Basic Vector Operations (boilerplate, already implemented) ----
 
+//vector addition, subtraction, scalar multiplication and division
 Vector3D& Vector3D::operator+=(const Vector3D& v) { x += v.x; y += v.y; z += v.z; return *this; }
+
 Vector3D& Vector3D::operator-=(const Vector3D& v) { x -= v.x; y -= v.y; z -= v.z; return *this; }
 Vector3D& Vector3D::operator*=(float s) { x *= s; y *= s; z *= s; return *this; }
+
+//can be made more with reciprocal square root function for performance, but this is fine for now
 Vector3D& Vector3D::operator/=(float s) { float inv = 1.0f / s; x *= inv; y *= inv; z *= inv; return *this; }
 
+//vector addition, subtraction, negation, scalar multiplication and division
 Vector3D operator+(const Vector3D& a, const Vector3D& b) { return Vector3D(a.x + b.x, a.y + b.y, a.z + b.z); }
 Vector3D operator-(const Vector3D& a, const Vector3D& b) { return Vector3D(a.x - b.x, a.y - b.y, a.z - b.z); }
 Vector3D operator-(const Vector3D& v) { return Vector3D(-v.x, -v.y, -v.z); }
 Vector3D operator*(const Vector3D& v, float s) { return Vector3D(v.x * s, v.y * s, v.z * s); }
+
 Vector3D operator*(float s, const Vector3D& v) { return v * s; }
 Vector3D operator/(const Vector3D& v, float s) { return v * (1.0f / s); }
 
