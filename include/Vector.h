@@ -12,14 +12,15 @@ namespace fged {
 struct Vector3D {
     //vector components as members
     float x, y, z;
+    Vector3D(float a, float b, float c) : x(a), y(b), z(c) {}
+
+    float& operator[](int i) { return (&x)[i]; }
+    
+    // Access vector components by index. 0 -> x, 1 -> y, 2 -> z.
+    const float& operator[](int i) const { return (&x)[i]; }
 
     // Default constructor and a constructor that takes three floats.
     Vector3D() = default;
-    Vector3D(float x_, float y_, float z_) : x(x_), y(y_), z(z_) {}
-
-    // Access vector components by index. 0 -> x, 1 -> y, 2 -> z.
-    float& operator[](int i) { return (&x)[i]; }
-    const float& operator[](int i) const { return (&x)[i]; }
 
     // --- §1.2 Basic Vector Operations --------------------------------
     // Boilerplate arithmetic — provided so the project compiles from the

@@ -32,4 +32,15 @@ and scalars: *s*, *t*
 | (st)**a** = s(t**a**) | Associative Law fo scalar-vector multiplication |
 | t**a** = **a**t| Communative law for scalar-vector multiplication|
 |t(**a**+**b**) = t**a** + t**b** | Distributive Law for vect-scal multiplication |
-|(s + t)**a** = s**a** + t**a**| Distributive Law for vect-scal multiplication |
+|(s + t)**a** = s**a** + t**a**| Distributive Law for vector-scalar multiplication |
+
+Visually:
+(Insert  Gif Here)
+
+Addition:
+    **a** + **b**: \
+    Tip of **a** to end of **b**
+
+Subtraction: **a** - **b**: \
+    Tip of **a** then negation of **b** so opposite direction same magnitude in the direction of b
+

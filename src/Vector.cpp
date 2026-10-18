@@ -16,7 +16,7 @@ Vector3D& Vector3D::operator/=(float s) { float inv = 1.0f / s; x *= inv; y *= i
 
 //vector addition, subtraction, negation, scalar multiplication and division
 Vector3D operator+(const Vector3D& a, const Vector3D& b) { return Vector3D(a.x + b.x, a.y + b.y, a.z + b.z); }
-Vector3D operator-(const Vector3D& a, const Vector3D& b) { return Vector3D(a.x - b.x, a.y - b.y, a.z - b.z); }
+
 Vector3D operator-(const Vector3D& v) { return Vector3D(-v.x, -v.y, -v.z); }
 Vector3D operator*(const Vector3D& v, float s) { return Vector3D(v.x * s, v.y * s, v.z * s); }
 
@@ -29,6 +29,40 @@ Vector3D operator/(const Vector3D& v, float s) { return v * (1.0f / s); }
 float Magnitude(const Vector3D& v) {
     return std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
 }
+
+inline Vector3D operator*(const Vector3D& v, float s) {
+    return Vector3D(v.x * s, v.y * s, v.z * s);
+}
+
+//slow division by scalar, but it works. Can be optimized later if needed.
+inline Vector3D operator/(const Vector3D& v, float s) {
+/*
+1. Check if the scalar is zero to avoid division by zero.
+2. If the scalar is zero, return a zero vector or handle the error as appropriate.
+3. If the scalar is not zero, perform the division and return the resulting vector.
+    s = 1.0f / s; // Calculate the reciprocal of the scalar
+    return Vector3D(v.x * s, v.y * s, v.z * s); // Multiply each component of the vector by the reciprocal
+
+*/
+    //check if the scalar is zero to avoid division by zero.
+    if (s == 0.0f) {
+        // Handle the error as appropriate, e.g., return a zero vector or throw an exception
+        return Vector3D(0.0f, 0.0f, 0.0f); // Return a zero vector as a placeholder
+    }
+    //Just in case
+    else {
+        s = 1.0f / s; // Calculate the reciprocal of the scalar
+        return Vector3D(v.x * s, v.y * s, v.z * s); // Multiply each component of the vector by the reciprocal
+    }
+
+    //if all else fails just go with it bro
+    return Vector3D(v.x / s, v.y / s, v.z / s);
+}
+
+//Subracton
+
+//Multiplication
+Vector3D *
 
 // TODO(FGED §1.2.1): implement using Magnitude() above.
 // ---Completed
@@ -47,7 +81,7 @@ Vector3D Normalize(const Vector3D& v) {
 //returns the dot product of two vectors which is a scalar value representing 
 //  the cosine of the angle between them multiplied by their magnitudes.
 float Dot(const Vector3D& a, const Vector3D& b) {
-    return a.x * b.x + a.y * b.y + a.z * b.z;
+    return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
 }
 
 // TODO(FGED §1.5.2): implement.
