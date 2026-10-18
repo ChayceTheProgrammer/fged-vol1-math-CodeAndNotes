@@ -42,12 +42,13 @@ int main() {
     //const indexing
     const Vector3D d(7.0f, 8.0f, 9.0f);
     printf("Aritmetic check: d[0] = %.2f, d[1] = %.2f, d[2] = %.2f\n", d[0], d[1], d[2]);
+    
     //division edge case:
     Vector3D e = d / c;
-    print("e = d / c evaluates to ", e);
+    printf("e = d / c evaluates to (%.2f, %.2f, %.2f)\n", e.x, e.y, e.z);
 
     //Matrix:
-    
+
 
 
    // --- Exercise 1 ------------------------------------------------------

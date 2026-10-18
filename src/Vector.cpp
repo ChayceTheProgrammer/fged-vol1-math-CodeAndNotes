@@ -22,6 +22,7 @@ Vector3D operator*(const Vector3D& v, float s) { return Vector3D(v.x * s, v.y * 
 
 Vector3D operator*(float s, const Vector3D& v) { return v * s; }
 Vector3D operator/(const Vector3D& v, float s) { return v * (1.0f / s); }
+Vector3D operator/(const Vector3D& a, const Vector3D& b) { return Vector3D(a.x / b.x, a.y / b.y, a.z / b.z); } // Component-wise division
 
 // --- §1.2.1 Magnitude and Scalar Multiplication -------------------------
 // TODO(FGED §1.2.1): implement. 
@@ -61,8 +62,12 @@ inline Vector3D operator/(const Vector3D& v, float s) {
 
 //Subracton
 
-//Multiplication
-Vector3D *
+//Multiplication (Component-wise or Hadamard product)
+//RGB Surface Color Blending 
+Vector3D operator*(const Vector3D& a, const Vector3D& b) {
+    return Vector3D(a.x * b.x, a.y * b.y, a.z * b.z);
+}   
+
 
 // TODO(FGED §1.2.1): implement using Magnitude() above.
 // ---Completed

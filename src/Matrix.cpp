@@ -21,6 +21,17 @@ Matrix3D operator+(const Matrix3D& a, const Matrix3D& b) {
             r.n[c][row] = a.n[c][row] + b.n[c][row];
     return r;
 }
+bool isDaiagonal(const Matrix3D& m) {
+    // Check if all off-diagonal elements are zero
+    for (int c = 0; c < 3; ++c) {
+        for (int row = 0; row < 3; ++row) {
+            if (c != row && m.n[c][row] != 0.0f) {
+                return false; // Found a non-zero off-diagonal element
+            }
+        }
+    }
+    return true; // All off-diagonal elements are zero
+}
 
 Matrix3D operator-(const Matrix3D& a, const Matrix3D& b) {
     Matrix3D r;

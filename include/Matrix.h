@@ -42,6 +42,8 @@ Matrix3D operator*(const Matrix3D& a, const Matrix3D& b);
 // TODO(FGED §1.4.2): implement matrix-vector multiplication.
 Vector3D operator*(const Matrix3D& m, const Vector3D& v);
 
+bool isDaiagonal(const Matrix3D& m); // Returns true if the matrix is diagonal.
+
 // --- §1.7 Matrix Inversion ------------------------------------------------
 // TODO(FGED §1.7.1): return the 3x3 identity matrix.
 Matrix3D Identity3D();

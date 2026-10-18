@@ -35,8 +35,11 @@ Vector3D operator+(const Vector3D& a, const Vector3D& b);
 Vector3D operator-(const Vector3D& a, const Vector3D& b);
 Vector3D operator-(const Vector3D& v);
 Vector3D operator*(const Vector3D& v, float s);
+Vector3D operator*(const Vector3D& a, const Vector3D& b); // Component-wise multiplication
 Vector3D operator*(float s, const Vector3D& v);
 Vector3D operator/(const Vector3D& v, float s);
+Vector3D operator/(const Vector3D& a, const Vector3D& b); // Component-wise division    
+
 
 // --- §1.2.1 Magnitude and Scalar Multiplication -----------------------
 // TODO(FGED §1.2.1): implement the vector's magnitude (length).
