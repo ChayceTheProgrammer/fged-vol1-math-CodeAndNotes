@@ -44,3 +44,11 @@ Addition:
 Subtraction: **a** - **b**: \
     Tip of **a** then negation of **b** so opposite direction same magnitude in the direction of b
 
+Multiplication component
+
+
+
+
+
+
+
